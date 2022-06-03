@@ -22,7 +22,11 @@ app.put('/api/update', (req, res) => {
 });
 
 app.delete('/api/delete', (req, res) => {
-    todoController.deleteTodo(req.params.id).then(data => res.json(data));
+    todoController.deleteTodo(req.body._id).then(data => res.json(data));
+});
+
+app.put('/api/complete', (req, res) => {
+    todoController.updateTodo(req.body).then(data => res.json(data));
 });
 
 app.listen(port, () => {

@@ -29,7 +29,7 @@ class TodoService {
         } catch(err) {
             console.log('error', err);
         }
-        return data;
+        return todo;
     }
 
     async deleteTodo(todoId) {
@@ -39,7 +39,7 @@ class TodoService {
         } catch(err) {
             console.log('error', err);
         }
-        return {status: `${data.deletedCount > 0 ? true : false}`};
+        return todoId;
     }
 
 }
