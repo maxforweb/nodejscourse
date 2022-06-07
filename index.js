@@ -1,9 +1,12 @@
 import express from "express";
+import env from "dotenv";
 import { appGetTodos } from "./src/express/appGetTodos.js";
 import { appCreateTodo } from "./src/express/appCreateTodo.js";
 import { appUpdateTodo } from "./src/express/appUpdateTodo.js";
 import { appCompleteTodo } from "./src/express/appCompleteTodo.js";
 import { appDeleteTodo } from "./src/express/appDeleteTodo.js";
+
+env.config();
 
 const PORT = 3000;
 

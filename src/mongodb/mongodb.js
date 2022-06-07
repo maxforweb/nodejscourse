@@ -1,8 +1,5 @@
 import mongo from "mongodb";
 
-const URI =
-  "mongodb+srv://nodejscourse:L7K4Tldfw0X6rg7S@cluster0.iwbiy.mongodb.net/?retryWrites=true&w=majority";
-
 export class Mongo {
   constructor() {
     this.instance;
@@ -11,7 +8,7 @@ export class Mongo {
   static async collection() {
     if (!this.instance) {
       try {
-        const mongoClient = new mongo.MongoClient(URI);
+        const mongoClient = new mongo.MongoClient(process.env.DB_URI);
         console.log("Connecting to MongoDB Atlas cluster...");
         await mongoClient.connect();
         console.log("Successfully connected to MongoDB Atlas!");
