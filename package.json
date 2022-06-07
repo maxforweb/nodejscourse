@@ -1,0 +1,27 @@
+{
+  "name": "nodejscourse",
+  "version": "1.0.0",
+  "description": "## create todo application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/proteus1121/nodejscourse.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/proteus1121/nodejscourse/issues"
+  },
+  "homepage": "https://github.com/proteus1121/nodejscourse#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongodb": "^4.6.0",
+    "request": "^2.88.2"
+  }
+}
