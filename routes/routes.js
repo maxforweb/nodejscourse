@@ -1,5 +1,5 @@
 const express = require("express");
-const { TodoItem } = require("./models");
+const { TodoItem } = require("../models/models");
 const app = express();
 
 app.get("/", async (req, res) => {
@@ -22,7 +22,7 @@ app.post("/create", async (req, res) => {
       await item.save();
       res.send(item);
     } else {
-        res.status(409).send("Item have already exists!");
+      res.status(409).send("Item have already exists!");
     }
   } catch (error) {
     res.status(500).send(error);
