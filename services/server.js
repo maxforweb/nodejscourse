@@ -1,8 +1,9 @@
+import 'dotenv/config';
+
 import express from 'express';
 import { MongoDatabaseClient } from "../libs/db.js";
 import { ObjectId } from "mongodb";
-
-const PORT = process.env.PORT || 5000;
+import { PORT } from '../config.js';
 
 const app = express();
 const mongoClient = new MongoDatabaseClient();
@@ -72,7 +73,7 @@ app.delete('/delete/:id', async (req, res) => {
     }
 });
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
     console.log(`server running on http://localhost:${PORT}`);
 })
 

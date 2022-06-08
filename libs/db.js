@@ -1,9 +1,5 @@
 import { MongoClient } from 'mongodb';
-
-const USER_PASSWORD='zF27PvYx_rFJWaX';
-const URL=`mongodb+srv://kapusta:${USER_PASSWORD}@cluster0.ggxrpws.mongodb.net/?retryWrites=true&w=majority`;
-const DB_NAME='nodejs-homework-2';
-const COLLECTION_NAME='todos';
+import { URL, COLLECTION_NAME, DB_NAME } from "../config.js";
 
 export class MongoDatabaseClient {
     constructor() {
